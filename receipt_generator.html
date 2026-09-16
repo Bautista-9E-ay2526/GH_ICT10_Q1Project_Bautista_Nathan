@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Pizzaria System | Ordering System</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Nathan's Pizzaria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">SKU - Generator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="receipt_generator.html">Receipt Generator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="card app-card">
+                    <div class="card-header text-center">
+                        <h3 class="mb-0">Pizzeria Food Ordering</h3>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <h5 class="mb-3 fw-bold">Menu</h5>
+
+                        <form id="order-form">
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="chicken" value="79.99">
+                                    <label id="chicken-label" for="chicken">Chicken Wings</label>
+                                </div>
+                                <span class="price">₱79.99</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="spaghetti" value="50">
+                                    <label id="spaghetti-label" for="spaghetti">Spaghetti</label>
+                                </div>
+                                <span class="price">₱50.00</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="pizza" value="120">
+                                    <label id="pizza-label" for="pizza">Pizza</label>
+                                </div>
+                                <span class="price">₱120.00</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="iced_tea" value="30">
+                                    <label id="iced_tea-label" for="iced_tea">Iced Tea</label>
+                                </div>
+                                <span class="price">₱30.00</span>
+                            </div>
+
+                            <div class="menu-item">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="cola" value="20">
+                                    <label id="cola-label" for="cola">Coca-cola</label>
+                                </div>
+                                <span class="price">₱20.00</span>
+                            </div>
+
+                            <div class="d-grid mt-4">
+                                <button type="button" py-click="create_order" class="btn btn-order btn-lg text-white">
+                                    Create Order
+                                </button>
+                            </div>
+                        </form>
+
+                        <hr class="my-4">
+
+                        <div id="show_receipt">
+                            <p class="text-muted text-center mb-0">Your order summary will appear here.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-footer text-center text-muted small py-3">
+                        Select your items and click "Create Order"
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 footer-custom">
+        <div class="container">
+            <p class="mb-0">Nathan's Pizzaria &mdash; 1st Quarter Project</p>
+        </div>
+    </footer>
+
+    <py-script src="main.py"></py-script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

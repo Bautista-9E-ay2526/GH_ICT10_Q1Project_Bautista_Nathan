@@ -1,0 +1,143 @@
+/* Base Layout & Background */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #334155;
+}
+
+/* Light Blue Navbar (High Contrast) */
+.navbar-custom {
+    background-color: #38bdf8 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .navbar-brand {
+    color: #0f172a !important;
+    font-weight: 700;
+}
+
+.navbar-custom .nav-link {
+    color: #1e293b !important;
+    font-weight: 600;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #0284c7 !important;
+}
+
+/* Main Card Styling */
+.app-card {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.app-card .card-header {
+    border-radius: 1rem 1rem 0 0;
+    background: linear-gradient(90deg, #0284c7, #2563eb);
+    color: #ffffff;
+    padding: 1.5rem;
+}
+
+/* Form Elements */
+.form-label {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+}
+
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #0284c7;
+    border-color: #0284c7;
+}
+
+/* Menu Items List */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    margin-bottom: 0.6rem;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+}
+
+.menu-item label {
+    font-weight: 600;
+    color: #1e293b;
+    margin-left: 0.6rem;
+    cursor: pointer;
+}
+
+.menu-item .price {
+    color: #0284c7;
+    font-weight: 700;
+}
+
+/* Primary Action Buttons */
+.btn-generate,
+.btn-order {
+    background: linear-gradient(90deg, #0284c7, #2563eb);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-generate:hover,
+.btn-order:hover {
+    background: linear-gradient(90deg, #0369a1, #1d4ed8);
+    color: #ffffff;
+}
+
+/* Receipt Display Styling */
+.receipt-box {
+    background-color: #f0f9ff;
+    border-left: 5px solid #0284c7;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+}
+
+.receipt-header {
+    color: #0369a1;
+    font-weight: 700;
+}
+
+.receipt-total {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0369a1;
+}
+
+/* Light Blue Footer */
+.footer-custom {
+    background-color: #38bdf8 !important;
+    color: #0f172a !important;
+    font-weight: 600;
+}
+
+/* PyScript UI Element Override */
+py-terminal {
+    display: none;
+}
